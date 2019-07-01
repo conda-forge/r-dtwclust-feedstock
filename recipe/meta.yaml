@@ -30,6 +30,7 @@ requirements:
     - {{posix}}sed               # [win]
     - {{posix}}coreutils         # [win]
     - {{posix}}zip               # [win]
+    - {{posix}}findutils         # [win]
   host:
     - r-base
     - r-matrix
