@@ -1,4 +1,4 @@
-{% set version = "5.5.6" %}
+{% set version = "5.5.7" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/dtwclust_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/dtwclust/dtwclust_{{ version }}.tar.gz
-  sha256: f54af8bc0c936375e457fb50c14512469f71823847f5abd284a2c58464fdba15
+  sha256: c3d8ac0df9d01080d716bfa96d6517adb4aea2ad80910e387faff1cc4b942cbb
 
 build:
-  merge_build_host: True  # [win]
-  number: 1
+  merge_build_host: true  # [win]
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
@@ -85,17 +85,12 @@ test:
 about:
   home: https://github.com/asardaes/dtwclust
   license: GPL-3
-  summary: Time series clustering along with optimized techniques related to the Dynamic Time
-    Warping distance and its corresponding lower bounds. Implementations of partitional,
-    hierarchical, fuzzy, k-Shape and TADPole clustering are available. Functionality
-    can be easily extended with custom distance measures and centroid definitions. Implementations
-    of DTW barycenter averaging, a distance based on global alignment kernels, and the
-    soft-DTW distance and centroid routines are also provided.  All included distance
-    functions have custom loops optimized for the  calculation of cross-distance matrices,
-    including parallelization support. Several cluster validity indices are included.
+  summary: Time series clustering along with optimized techniques related to the Dynamic Time Warping distance and its corresponding lower bounds. Implementations of partitional, hierarchical, fuzzy, k-Shape and TADPole clustering are available. Functionality can be easily extended with custom distance measures and centroid
+    definitions. Implementations of DTW barycenter averaging, a distance based on global alignment kernels, and the soft-DTW distance and centroid routines are also provided.  All included distance functions have custom loops optimized for the  calculation of cross-distance matrices, including parallelization support. Several
+    cluster validity indices are included.
   license_family: GPL3
   license_file:
-    - '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3
 
 extra:
   recipe-maintainers:
