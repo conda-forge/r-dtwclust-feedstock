@@ -30,7 +30,7 @@ requirements:
     - {{ posix }}sed               # [win]
     - {{ posix }}coreutils         # [win]
     - {{ posix }}zip               # [win]
-    - {{ posix }}findutils         # [win]
+    - cross-r-base {{ r_base }}    # [build_platform != target_platform]
   host:
     - r-base
     - r-matrix
@@ -39,7 +39,6 @@ requirements:
     - r-rcpparmadillo
     - r-rcppparallel >=4.4.0
     - r-rcppthread
-    - r-bigmemory
     - r-clue
     - r-cluster
     - r-dplyr
@@ -48,7 +47,6 @@ requirements:
     - r-foreach
     - r-ggplot2
     - r-ggrepel
-    - r-nloptr
     - r-proxy >=0.4_16
     - r-reshape2
     - r-shiny
@@ -62,7 +60,6 @@ requirements:
     - r-rcpparmadillo
     - r-rcppparallel >=4.4.0
     - r-rcppthread
-    - r-bigmemory
     - r-clue
     - r-cluster
     - r-dplyr
@@ -71,7 +68,6 @@ requirements:
     - r-foreach
     - r-ggplot2
     - r-ggrepel
-    - r-nloptr
     - r-proxy >=0.4_16
     - r-reshape2
     - r-shiny
@@ -84,7 +80,7 @@ test:
 
 about:
   home: https://github.com/asardaes/dtwclust
-  license: GPL-3
+  license: GPL-3.0-only
   summary: Time series clustering along with optimized techniques related to the Dynamic Time Warping distance and its corresponding lower bounds. Implementations of partitional, hierarchical, fuzzy, k-Shape and TADPole clustering are available. Functionality can be easily extended with custom distance measures and centroid
     definitions. Implementations of DTW barycenter averaging, a distance based on global alignment kernels, and the soft-DTW distance and centroid routines are also provided.  All included distance functions have custom loops optimized for the  calculation of cross-distance matrices, including parallelization support. Several
     cluster validity indices are included.
