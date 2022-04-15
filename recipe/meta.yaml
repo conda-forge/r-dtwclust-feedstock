@@ -1,4 +1,4 @@
-{% set version = "5.5.9" %}
+{% set version = "5.5.10" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/dtwclust_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/dtwclust/dtwclust_{{ version }}.tar.gz
-  sha256: eeaaa5bf99890850b6f0afbc4e113b627d1ea741ceb2df326407df847ca8a359
+  sha256: 7ef67af86805aae394bd51bd12144693546e72d0046a9a53949c700035f96934
 
 build:
   merge_build_host: true  # [win]
