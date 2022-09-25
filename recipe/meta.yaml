@@ -30,11 +30,10 @@ requirements:
     - {{ posix }}sed               # [win]
     - {{ posix }}coreutils         # [win]
     - {{ posix }}zip               # [win]
-    - {{ posix }}findutils         # [win]
     - cross-r-base {{ r_base }}    # [build_platform != target_platform]
   host:
     - r-base
-    - r-matrix
+    - r-matrix >=1.5_0
     - r-rspectra
     - r-rcpp
     - r-rcpparmadillo
@@ -55,7 +54,7 @@ requirements:
   run:
     - r-base
     - {{ native }}gcc-libs         # [win]
-    - r-matrix
+    - r-matrix >=1.5_0
     - r-rspectra
     - r-rcpp
     - r-rcpparmadillo
