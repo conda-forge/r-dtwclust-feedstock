@@ -1,11 +1,22 @@
+About r-dtwclust-feedstock
+==========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-dtwclust-feedstock/blob/main/LICENSE.txt)
+
 About r-dtwclust
-================
+----------------
 
 Home: https://github.com/asardaes/dtwclust
 
 Package license: GPL-3.0-only
 
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-dtwclust-feedstock/blob/main/LICENSE.txt)
+Summary: Time series clustering along with optimized techniques related to the Dynamic Time Warping distance and its corresponding lower bounds. Implementations of partitional, hierarchical, fuzzy, k-Shape and TADPole clustering are available. Functionality can be easily extended with custom distance measures and centroid definitions. Implementations of DTW barycenter averaging, a distance based on global alignment kernels, and the soft-DTW distance and centroid routines are also provided.  All included distance functions have custom loops optimized for the  calculation of cross-distance matrices, including parallelization support. Several cluster validity indices are included.
+About r-dtwclust
+----------------
+
+Home: https://github.com/asardaes/dtwclust
+
+Package license: GPL-3.0-only
 
 Summary: Time series clustering along with optimized techniques related to the Dynamic Time Warping distance and its corresponding lower bounds. Implementations of partitional, hierarchical, fuzzy, k-Shape and TADPole clustering are available. Functionality can be easily extended with custom distance measures and centroid definitions. Implementations of DTW barycenter averaging, a distance based on global alignment kernels, and the soft-DTW distance and centroid routines are also provided.  All included distance functions have custom loops optimized for the  calculation of cross-distance matrices, including parallelization support. Several cluster validity indices are included.
 
