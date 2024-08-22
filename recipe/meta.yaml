@@ -1,6 +1,5 @@
 {% set version = "6.0.0" %}
 {% set posix = 'm2-' if win else '' %}
-{% set native = 'm2w64-' if win else '' %}
 
 package:
   name: r-dtwclust
@@ -13,8 +12,7 @@ source:
   sha256: 104fc7eb154752593158dccea4ada556d70580a99507438b8d37b88b490fc02f
 
 build:
-  merge_build_host: true  # [win]
-  number: 0
+  number: 1
   rpaths:
     - lib/R/lib/
     - lib/
@@ -56,7 +54,6 @@ requirements:
     - r-shinyjs
   run:
     - r-base
-    - {{ native }}gcc-libs         # [win]
     - r-matrix
     - r-rspectra
     - r-rcpp
